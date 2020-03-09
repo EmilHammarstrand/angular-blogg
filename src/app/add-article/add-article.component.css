@@ -1,0 +1,62 @@
+/* #content {
+    height: 300px;
+    width: 250px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    border: 2px solid black;
+    border-style: inset;
+    padding: 3em;
+    margin: 2em;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1em;
+} */
+
+input, label {
+    display:block;
+}
+
+#author {
+    float: left;
+}
+
+#titlee {
+    float:left;
+    margin-right:20px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+#content {
+    width: 362px;
+    height: 300px;
+}
+
+form {
+    margin: 1em;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+button {
+    margin-top: 10px;
+}
+
+span {
+    color: red;
+}

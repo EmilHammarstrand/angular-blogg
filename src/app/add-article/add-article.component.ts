@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddArticleComponent implements OnInit {
   loginStatus:boolean;
+  
   constructor(public LoginService: LoginServiceService ) { }
 
+  sendMessage(){
+    console.log("hej");
+  }
   ngOnInit(){
     this.LoginService.getValue().subscribe((value)=> {
       this.loginStatus = value;
