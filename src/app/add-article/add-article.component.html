@@ -1,0 +1,7 @@
+<p>"Lägga till artikel" [skyddad] - formulär som bloggaren kan använda för att lägga till en nytt inlägg. Kan bara användas om man har loggat in.</p>
+<div *ngIf="!loginStatus; else elseBlock">
+    <p>DU MÅSTE LOGGA IN FÖR ATT FÅ TILLGÅNG TILL DENNA FUNKTIONALITET</p>
+</div>
+<ng-template #elseBlock>
+    <p>DU ÄR NU INLOGGAD</p>
+</ng-template>

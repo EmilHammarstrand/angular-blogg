@@ -1,0 +1,17 @@
+<header>
+  <nav>
+    <a routerLink="/start-page" routerLinkActive="active">Home</a>
+    <a routerLink="/latest-articles" routerLinkActive="active">Latest articles</a>
+    <a routerLink="/all-articles" routerLinkActive="active">All articles</a>
+    <a routerLink="/login" routerLinkActive="active">Log in</a>
+    <a *ngIf="isEnabled;" routerLink="/add-article" routerLinkActive="active">Add article</a>
+  </nav>  
+</header>
+<router-outlet></router-outlet>
+<footer>
+  <nav>
+    <a href="www.facebook.com" target="_blank">Ansiktsboken</a>
+    <a href="www.facebook.com" target="_blank">Instagram</a>
+    <a href="www.facebook.com" target="_blank">Kvitter</a>
+  </nav>  
+</footer>
