@@ -3,33 +3,26 @@
     <p>DU MÅSTE LOGGA IN FÖR ATT FÅ TILLGÅNG TILL DENNA FUNKTIONALITET</p>
 </div>
 <ng-template #elseBlock>
-<!-- <div id="container">
-    <form>
-        <h1>Write new article</h1>
-       <label for="title">Title:</label> <input id="title" type="text" ><br>
-       <label for="author">Author:</label> <input id="author" type="text" ><br>
-       <label for="content">Content:</label> <input id="content" type="text" >
-    </form>
-</div> -->
+
 <div id="container">
 <form>
     <h1>Add article</h1>
 
     <div id="titlee">
         <label for="titlee"><span>*</span> Title</label>
-        <input id="titlee" type="text" required name="titlee" minlength="10" [(ngModel)]="titlee" />
+        <input id="titlee" type="text" required name="titlee" minlength="10" [(ngModel)]="titlee">
     </div>
 
     <div id="author">
         <label for="author">Author</label>
-        <input id="author" type="text"  name="author" [(ngModel)]="author" />
+        <input id="author" type="text"  name="author" [(ngModel)]="author">
     </div>
 
 
     <label for="content"><span>*</span> Content</label>
-    <textarea name="content" required rows="10" cols="48" [(ngModel)]="content"> </textarea>
-    <p> Time to read: {{afterButtonPressedValue}} </p>
-    <button (click)="publishArticle">Publish</button>
+    <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
+    <button (click)="publishArticleBtn()">Publish</button>
+
 </form>
 </div>
 </ng-template>

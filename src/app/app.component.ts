@@ -8,6 +8,7 @@ import { LoginServiceService } from './login-service.service';
 })
 export class AppComponent {
   isEnabled:boolean;
+  title: any;
   constructor(private LoginService: LoginServiceService ) { }
   ngOnInit(){
     this.LoginService.getValue().subscribe((value)=> {
