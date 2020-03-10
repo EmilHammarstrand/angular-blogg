@@ -1,1 +1,24 @@
-<p>Startsidan - visa hela den senaste artikeln</p>
+
+
+<div class="article">
+    <h1>{{ latestArticle?.title }}</h1>
+    <p class="content">{{ latestArticle?.content }}</p>
+    <p class="author">Author: {{ latestArticle?.author }}</p>
+    <p class="time">Estimated time:{{ latestArticle?.estimatedTime }}</p>
+    <button (click)="deleteArticle()">Delete Article</button>
+</div>
+
+
+
+<!-- 
+
+<div id="cocktails-div">
+    <h2>Available Cocktails</h2>
+    <input [(ngModel)]="cocktailName" type="text" placeholder="Cocktail name..." id="newCocktail"/>
+    <button [disabled]="!cocktailName" type="submit" (click)="addCocktail()">Add Cocktail</button>
+    <ul class="cocktails" id="ulList">
+        <li *ngFor="let beverage of this.visitorService.beverages; let i = index;" (click)="onSelect(beverage)" [class.selected]="beverage === selectedBeverage">
+            <span class="badge">{{i+1}}</span> {{beverage.name}}
+        </li>
+    </ul>
+</div> -->
