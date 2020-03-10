@@ -9,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class AddArticleComponent implements OnInit {
   loginStatus:boolean;
   
+  
   constructor(public LoginService: LoginServiceService ) { }
-
-  sendMessage(){
-    console.log("hej");
+  titlee: string;
+  author: string;
+  content: string;
+  afterButtonPressedValue: string = "";
+  
+  publishArticle() {
+    this.titlee = this.afterButtonPressedValue;
   }
+
+
   ngOnInit(){
     this.LoginService.getValue().subscribe((value)=> {
       this.loginStatus = value;

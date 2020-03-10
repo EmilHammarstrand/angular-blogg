@@ -10,6 +10,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LatestArticleComponent } from './latest-article/latest-article.component';
+import { FormsModule } from '@angular/forms';
 
 
   const appRoutes: Routes = [
@@ -36,6 +37,7 @@ import { LatestArticleComponent } from './latest-article/latest-article.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
     )
