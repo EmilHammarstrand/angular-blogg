@@ -45,15 +45,12 @@ export class DataServiceService {
     }
     this.articleList.push(newArticle);
   }
-  removeArticle(){}
-  getArticles(amount){
-    if(amount === 'last')
-      return this.articleList[this.articleList.length-1];
-    //else if(amount ==='five')
-    // PROBLEM PÅ RADEN NEDAN!
-    //  return this.articleList.slice(Math.max(this.articleList.length - 5, 0));
-    //else if(amount === 'all')
-    //  return this.articleList;
+  removeArticle(){
+    this.articleList.splice(-1,1)
+    console.log(this.articleList);
+  }
+  getLatestArticle(){
+    return this.articleList[this.articleList.length-1];
   }
 
 
