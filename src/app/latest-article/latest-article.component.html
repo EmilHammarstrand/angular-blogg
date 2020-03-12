@@ -1,9 +1,6 @@
-<p>"Senaste artiklar" - visa de 5 senaste artiklarna, men bara en förhandsgranskning av innehållet</p>
-
 <main>
-    <div class="title">Title<div class="content">content</div></div>
-    <div class="title">Title<div class="content">content</div></div>
-    <div class="title">Title<div class="content">content</div></div>
-    <div class="title">Title<div class="content">content</div></div>
-    <div class="title">Title<div class="content">content</div></div>
+    <div *ngFor="let article of (this.DataService.articleList | slice:0:5); let i = index;">
+        <div class="title" id={{i}}>{{ article.title }}<div class="content"> {{ (article.content | slice:0:50) + '...'}} </div></div>
+        <button [disabled]="!disabled" (click)="removeArticle(i)">Delete Article</button>
+    </div>
 </main>

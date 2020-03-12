@@ -5,7 +5,7 @@
     <p class="content">{{ latestArticle?.content }}</p>
     <p class="author">Author: {{ latestArticle?.author }}</p>
     <p class="time">Estimated time:{{ latestArticle?.estimatedTime }}</p>
-    <button (click)="deleteArticle()">Delete Article</button>
+    <button [disabled]="!disabled" (click)="removeArticle(0)">Delete Article</button>
 </div>
 
 

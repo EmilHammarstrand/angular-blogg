@@ -7,20 +7,21 @@ import { LoginServiceService } from '../login-service.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  message = 'Är det säkert att det är du som är bloggaren?'
-  hidden = true;
+  message;
+  hidden;
   constructor(private LoginService: LoginServiceService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    this.LoginService.getValue().subscribe((value)=> {
+      this.hidden = value;
+    });
   }
   logIn(): void{
     this.LoginService.setValue(true);
     this.message = 'Du är nu inloggad, funktionalitet upplåst';
-    this.hidden = false;
   }
   logOut():void{
     this.LoginService.setValue(false);
-    this.message = 'Du är nu utloggad, är du bloggare?';
-    this.hidden = true;
+    this.message = 'Du är nu utloggad, är du bloggareN?';
   }
 }

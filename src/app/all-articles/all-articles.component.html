@@ -1,19 +1,8 @@
 <p>"Alla" - visa alla artiklar, men bara titlarna</p>
 
 <main>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
-<div class="title">Title</div>
+    <div *ngFor="let article of this.DataService.articleList; let i = index;">
+        <div class="title" id={{i}}>{{ article.title }}</div>
+        <button [disabled]="!disabled" (click)="removeArticle(i)">Delete Article</button>
+    </div>
 </main>

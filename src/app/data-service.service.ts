@@ -43,15 +43,14 @@ export class DataServiceService {
       author: author,
       estimatedTime: estimatedTime
     }
-    this.articleList.push(newArticle);
+    this.articleList.unshift(newArticle);
   }
-
-  removeArticle(){
-    this.articleList.splice(-1,1)
+  removeThisArticle(index){
+    this.articleList.splice(index,1);
     console.log(this.articleList);
   }
   getLatestArticle(){
-    return this.articleList[this.articleList.length-1];
+    return this.articleList[0];
   }
 
 
