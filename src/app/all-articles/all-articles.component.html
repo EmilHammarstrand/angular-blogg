@@ -1,5 +1,3 @@
-<p>"Alla" - visa alla artiklar, men bara titlarna</p>
-
 <main>
     <div *ngFor="let article of this.DataService.articleList; let i = index;">
         <div class="title" id={{i}}>{{ article.title }}</div>

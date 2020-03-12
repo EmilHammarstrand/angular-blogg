@@ -1,36 +1,26 @@
-<p>"Lägga till artikel" [skyddad] - formulär som bloggaren kan använda för att lägga till en nytt inlägg. Kan bara användas om man har loggat in.</p>
 <div *ngIf="!loginStatus; else elseBlock">
-    <p>DU MÅSTE LOGGA IN FÖR ATT FÅ TILLGÅNG TILL DENNA FUNKTIONALITET</p>
+    <p>You must login to acces this feature</p>
 </div>
 <ng-template #elseBlock>
-
-<div id="container">
-<form>
-    <h1>Add article</h1>
-
-    <div class="titlee">
-        <label for="titlee"><span>*</span> Title</label>
-        <input id="titlee" type="text" required name="titlee" minlength="10" [(ngModel)]="titlee" #title="ngModel">
-        <div *ngIf="title.errors?.minlength">Must be atleast 10 characters</div>
+    <div id="container">
+        <form>
+            <h1>Add article</h1>
+            <div class="titlee">
+                <label for="titlee"><span>*</span> Title</label>
+                <input id="titlee" type="text" required name="titlee" minlength="10" [(ngModel)]="titlee" #title="ngModel">
+                <div *ngIf="title.errors?.minlength">Must be atleast 10 characters</div>
+            </div>
+            <div class="author">
+                <label for="author">Author</label>
+                <input id="author" type="text"  name="author" [(ngModel)]="author">
+            </div>
+            <label for="content"><span>*</span> Content</label>
+            <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
+            <label for="estimatedTime">Estimated time</label>
+            <input name="estimatedTime" type="number" [(ngModel)]="estimatedTime" min="0" >
+            <div *ngIf="">Estimated time cant be 0</div>
+            <div id="errorMessage" *ngIf="errorMessage">You need to write a number!</div>
+            <button [disabled]="!content || !titlee"  (click)="publishArticleBtn()">Publish</button>
+        </form>
     </div>
-
-    <div class="author">
-        <label for="author">Author</label>
-        <input id="author" type="text"  name="author" [(ngModel)]="author">
-    </div>
-
-
-    <label for="content"><span>*</span> Content</label>
-    <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
-
-    <label for="estimatedTime">Estimated time</label>
-    <input name="estimatedTime" type="number" [(ngModel)]="estimatedTime" min="0" >
-    <div *ngIf="">Estimated time cant be 0</div>
-
-    <div id="errorMessage" *ngIf="errorMessage">You need to write a number!</div>
-    <button [disabled]="!content || !titlee"  (click)="publishArticleBtn()">Publish</button>
-    
-
-</form>
-</div>
 </ng-template>

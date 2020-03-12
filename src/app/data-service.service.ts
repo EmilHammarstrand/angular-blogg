@@ -1,4 +1,3 @@
-import { Article } from './article';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -29,7 +28,8 @@ export class DataServiceService {
       content: 'Class of frotend-development all yells, "Angular is the best"',
       author: 'David',
       estimatedTime: 4,
-    },  {
+    },  
+    {
       title: 'PC better than all consoles!',
       content: 'It has long been under discussion, but now it has been settled, PC is better than xbox and ps4',
       author: 'Last boss of gaming',
@@ -47,7 +47,6 @@ export class DataServiceService {
   }
   removeThisArticle(index){
     this.articleList.splice(index,1);
-    console.log(this.articleList);
   }
   getLatestArticle(){
     return this.articleList[0];

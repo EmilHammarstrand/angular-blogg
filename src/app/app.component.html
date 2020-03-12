@@ -3,7 +3,7 @@
     <a routerLink="/start-page" routerLinkActive="active">Home</a>
     <a routerLink="/latest-articles" routerLinkActive="active">Latest articles</a>
     <a routerLink="/all-articles" routerLinkActive="active">All articles</a>
-    <a routerLink="/login" routerLinkActive="active">Log in</a>
+    <a routerLink="/login" routerLinkActive="active">{{message}}</a>
     <a *ngIf="isEnabled;" routerLink="/add-article" routerLinkActive="active">Add article</a>
   </nav>  
 </header>
