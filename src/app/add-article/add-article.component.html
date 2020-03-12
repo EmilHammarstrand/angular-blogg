@@ -1,4 +1,4 @@
-<p>"Lägga till artikel" [skyddad] - formulär som bloggaren kan använda för att lägga till en nytt inlägg. Kan bara användas om man har loggat in.</p>
+
 <div *ngIf="!loginStatus; else elseBlock">
     <p>DU MÅSTE LOGGA IN FÖR ATT FÅ TILLGÅNG TILL DENNA FUNKTIONALITET</p>
 </div>
@@ -20,7 +20,7 @@
     </div>
 
 
-    <label for="content"><span>*</span> Content</label>
+    <label for="content"><span>*</span> Body text</label>
     <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
 
     <label for="estimatedTime">Estimated time</label>

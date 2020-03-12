@@ -1,4 +1,3 @@
-import { Article } from './article';
 import { Injectable } from '@angular/core';
 
 @Injectable({

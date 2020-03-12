@@ -26,8 +26,6 @@ export class AddArticleComponent implements OnInit {
   publishArticleBtn(){
     this.DataService.addArticle(this.titlee, this.content, this.author, this.estimatedTime);
 
-
-    
     if(isNaN(this.estimatedTime)){
       console.log("is not a number");
       this.errorMessage = true;
@@ -35,7 +33,6 @@ export class AddArticleComponent implements OnInit {
     }else {
       console.log("is number");
       this.errorMessage = false;
-      
     }
   }
 
