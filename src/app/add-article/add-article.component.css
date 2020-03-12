@@ -42,3 +42,7 @@ span {
 #errorMessage {
     margin-top: 0.5em;
 }
+
+#successfullyPublished {
+    color: rgb(0, 119, 0);
+}

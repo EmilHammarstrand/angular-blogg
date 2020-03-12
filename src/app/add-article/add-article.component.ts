@@ -15,23 +15,17 @@ export class AddArticleComponent implements OnInit {
   author: string;
   content: string;
   estimatedTime: number;
-  errorMessage: boolean = false;
- 
-
-
+  successfullyPublished: boolean;
+  showForm: boolean = true;
   constructor(public LoginService: LoginServiceService, public DataService: DataServiceService) { }
 
   
 
   publishArticleBtn(){
     this.DataService.addArticle(this.titlee, this.content, this.author, this.estimatedTime);
-    if(isNaN(this.estimatedTime)){
-      this.errorMessage = true;    
-    }else {
-      this.errorMessage = false;
-    }
+    this.successfullyPublished = true;
+    this.showForm = false;
   }
-
   ngOnInit(){
     this.LoginService.getValue().subscribe((value)=> {
       this.loginStatus = value;
