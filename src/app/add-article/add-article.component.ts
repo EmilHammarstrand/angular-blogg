@@ -14,7 +14,7 @@ export class AddArticleComponent implements OnInit {
   author: string;
   content: string;
   estimatedTime: number;
-
+  errorMessage: boolean = false;
  
 
 
@@ -22,6 +22,18 @@ export class AddArticleComponent implements OnInit {
 
   publishArticleBtn(){
     this.DataService.addArticle(this.titlee, this.content, this.author, this.estimatedTime);
+
+
+    
+    if(isNaN(this.estimatedTime)){
+      console.log("is not a number");
+      this.errorMessage = true;
+        
+    }else {
+      console.log("is number");
+      this.errorMessage = false;
+      
+    }
   }
 
   ngOnInit(){

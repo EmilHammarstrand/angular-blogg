@@ -1,34 +1,12 @@
-/* #content {
-    height: 300px;
-    width: 250px;
-}
-
-#container {
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    border: 2px solid black;
-    border-style: inset;
-    padding: 3em;
-    margin: 2em;
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 1em;
-} */
-
 input, label {
     display:block;
 }
 
-#author {
+.author {
     float: left;
 }
 
-#titlee {
+.titlee {
     float:left;
     margin-right:20px;
 }
@@ -59,4 +37,8 @@ button {
 
 span {
     color: red;
+}
+
+#errorMessage {
+    margin-top: 0.5em;
 }

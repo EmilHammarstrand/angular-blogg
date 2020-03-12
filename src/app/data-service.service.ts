@@ -53,6 +53,4 @@ export class DataServiceService {
   getLatestArticle(){
     return this.articleList[this.articleList.length-1];
   }
-
-
 }
