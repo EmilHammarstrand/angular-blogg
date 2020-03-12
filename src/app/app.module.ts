@@ -16,13 +16,16 @@ import { LatestArticleComponent } from './latest-article/latest-article.componen
 
   const appRoutes: Routes = [
     { path: '', redirectTo: '/start-page', pathMatch: 'full'},
+    { path: 'start', redirectTo: '/start-page'},
     { path: 'start-page', component: DetailedArticleComponent},
     { path: 'latest-articles', component: LatestArticleComponent},
+    { path: 'latest', redirectTo: '/latest-articles'},
     { path: 'all-articles', component: AllArticlesComponent},
+    { path: 'all', redirectTo: '/all-articles'},
     { path: 'login', component: LogInComponent},
     { path: 'add-article', component: AddArticleComponent},
+    { path: 'add', redirectTo: '/add-article'},
     { path: '**', component: PageNotFoundComponent }
-
 
   ];
 

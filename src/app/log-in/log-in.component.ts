@@ -14,14 +14,19 @@ export class LogInComponent implements OnInit {
   ngOnInit(): void {    
     this.LoginService.getValue().subscribe((value)=> {
       this.hidden = value;
+      if(this.hidden == true){
+        this.message = 'Du är nu inloggad, funktionalitet upplåst';
+      }
+      else{
+        this.message = 'Du är nu utloggad, är du bloggareN?';
+      }
     });
+
   }
   logIn(): void{
     this.LoginService.setValue(true);
-    this.message = 'Du är nu inloggad, funktionalitet upplåst';
   }
   logOut():void{
     this.LoginService.setValue(false);
-    this.message = 'Du är nu utloggad, är du bloggareN?';
   }
 }

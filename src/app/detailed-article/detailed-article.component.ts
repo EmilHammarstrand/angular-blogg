@@ -18,8 +18,6 @@ export class DetailedArticleComponent implements OnInit {
         this.LoginService.getValue().subscribe((value)=> {
       this.disabled = value;
     });
-    console.log(this.DataService.articleList);
-
   }
   addArticle(title,content,author,estimatedTime){
     this.DataService.addArticle(title,content,author,estimatedTime);
@@ -28,7 +26,6 @@ export class DetailedArticleComponent implements OnInit {
   removeArticle(index){
     this.DataService.removeThisArticle(index);
     this.latestArticle = this.DataService.getLatestArticle();
-
   }
 }
 

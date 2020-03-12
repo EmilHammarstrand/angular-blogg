@@ -8,12 +8,19 @@ import { LoginServiceService } from './login-service.service';
 })
 export class AppComponent {
   isEnabled:boolean;
-  title: any;
+  message:string;
   constructor(private LoginService: LoginServiceService ) { }
   ngOnInit(){
     this.LoginService.getValue().subscribe((value)=> {
       this.isEnabled = value;
+      if(this.isEnabled == true){
+        this.message = 'Log out';
+      }
+      else{
+        this.message = 'Log in';
+      }
     });
+
   }
   
 }
