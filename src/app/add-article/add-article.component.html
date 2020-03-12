@@ -24,7 +24,9 @@
     <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
 
     <label for="estimatedTime">Estimated time</label>
-    <input name="estimatedTime" type="text" [(ngModel)]="estimatedTime">
+    <input name="estimatedTime" type="number" [(ngModel)]="estimatedTime" min="0" >
+    <div *ngIf="">Estimated time cant be 0</div>
+
     <div id="errorMessage" *ngIf="errorMessage">You need to write a number!</div>
     <button [disabled]="!content || !titlee"  (click)="publishArticleBtn()">Publish</button>
     

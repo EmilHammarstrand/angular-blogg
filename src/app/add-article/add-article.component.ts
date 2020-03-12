@@ -20,6 +20,8 @@ export class AddArticleComponent implements OnInit {
 
   constructor(public LoginService: LoginServiceService, public DataService: DataServiceService) { }
 
+  
+
   publishArticleBtn(){
     this.DataService.addArticle(this.titlee, this.content, this.author, this.estimatedTime);
 
