@@ -20,7 +20,7 @@ export class LogInComponent implements OnInit {
   }
   logOut():void{
     this.LoginService.setValue(false);
-    this.message = 'Du är nu utloggad';
+    this.message = 'Du är nu utloggad, är du bloggare?';
     this.hidden = true;
   }
 }

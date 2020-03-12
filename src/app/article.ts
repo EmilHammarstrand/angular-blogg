@@ -1,5 +1,6 @@
 export interface Article {
     title:string;
     content:string;
-    id:number;
+    author:string
+    estimatedTime:number
 }

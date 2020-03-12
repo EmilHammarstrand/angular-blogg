@@ -37,3 +37,11 @@ nav a:hover{
     background-color: #ccc;
     color:black;
 }
+.article{
+    border:1px solid #ccc;
+    max-width: 30em;
+    margin:0.5em;
+}
+.content, .author, .time{
+    padding:1em;
+}
