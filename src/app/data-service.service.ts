@@ -36,8 +36,8 @@ export class DataServiceService {
       estimatedTime: 6,
     }
   ];
-  addArticle(title,content,author,estimatedTime){
-    let newArticle = {
+  addArticle(title:string, content:string, author:string, estimatedTime:number){
+    let newArticle = { 
       title: title,
       content: content,
       author: author,
@@ -45,6 +45,7 @@ export class DataServiceService {
     }
     this.articleList.push(newArticle);
   }
+
   removeArticle(){
     this.articleList.splice(-1,1)
     console.log(this.articleList);

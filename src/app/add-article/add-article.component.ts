@@ -1,5 +1,6 @@
 import { LoginServiceService } from './../login-service.service';
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'app-add-article',
@@ -12,11 +13,15 @@ export class AddArticleComponent implements OnInit {
   titlee: string;
   author: string;
   content: string;
+  estimatedTime: number;
 
-  constructor(public LoginService: LoginServiceService ) { }
+ 
+
+
+  constructor(public LoginService: LoginServiceService, public DataService: DataServiceService) { }
 
   publishArticleBtn(){
-    this.buttonPressValue = this.titlee + this.author + this.content;
+    this.DataService.addArticle(this.titlee, this.content, this.author, this.estimatedTime);
   }
 
   ngOnInit(){

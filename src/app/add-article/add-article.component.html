@@ -21,6 +21,9 @@
 
     <label for="content"><span>*</span> Content</label>
     <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
+
+    <label for="estimatedTime">Estimated time</label>
+    <input name="estimatedTime" type="text" [(ngModel)]="estimatedTime">
     <button (click)="publishArticleBtn()">Publish</button>
 
 </form>
