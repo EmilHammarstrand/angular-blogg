@@ -8,7 +8,7 @@
             <h1>Add article</h1>
             <div class="titlee">
                 <label for="titlee"><span>*</span> Title</label>
-                <input id="titlee" type="text" required name="titlee" minlength="10" [(ngModel)]="titlee" #title="ngModel">
+                <input id="titlee" placeholder="Must be atleast 10 characters"type="text" required name="titlee" minlength="10" [(ngModel)]="titlee" #title="ngModel">
                 <div *ngIf="title.errors?.minlength">Must be atleast 10 characters</div>
             </div>
 
@@ -18,7 +18,7 @@
             </div>
 
             <label for="content"><span>*</span> Content</label>
-            <textarea  rows="14" cols="45" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
+            <textarea  rows="14" cols="45" placeholder="Tell us your story!" required type="text"  name="content" [(ngModel)]="content"></textarea><br>
             <label for="estimatedTime">Estimated time</label>
             <input name="estimatedTime" type="number" [(ngModel)]="estimatedTime" min="0" >
             <button [disabled]="!content || !titlee" (click)="publishArticleBtn()">Publish</button>
