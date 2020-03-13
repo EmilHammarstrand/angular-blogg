@@ -2,6 +2,6 @@
     <h1>{{ latestArticle?.title }}</h1>
     <p class="content">{{ latestArticle?.content }}</p>
     <p class="author">Author: {{ latestArticle?.author }}</p>
-    <p class="time">Estimated time:{{ latestArticle?.estimatedTime }}</p>
+    <p class="time">Estimated time:{{ latestArticle?.estimatedTime }} minutes</p>
     <button [disabled]="!disabled" (click)="removeArticle(0)">Delete Article</button>
 </div>
